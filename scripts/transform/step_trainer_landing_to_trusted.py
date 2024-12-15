@@ -69,6 +69,8 @@ step_trainer_trusted = glueContext.write_dynamic_frame.from_options(
     connection_options={
         "path": "s3://mys3nbk/step_trainer/trusted",
         "partitionKeys": [],
+        "enableUpdateCatalog": True, 
+        "catalog.updateBehavior": "UPDATE_IN_DATABASE"
     },
     transformation_ctx="step_trainer_trusted",
 )

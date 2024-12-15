@@ -73,6 +73,8 @@ accelerometer_trusted = glueContext.write_dynamic_frame.from_options(
     connection_options={
         "path": "s3://human-balance/customer/trusted",
         "partitionKeys": [],
+        "enableUpdateCatalog": True, 
+        "catalog.updateBehavior": "UPDATE_IN_DATABASE"
     },
     transformation_ctx="accelerometer_trusted",
 )

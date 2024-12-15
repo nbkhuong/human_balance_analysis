@@ -55,6 +55,8 @@ customer_curated = glueContext.write_dynamic_frame.from_options(
     connection_options={
         "path": "s3://human-balance/customer/curated",
         "partitionKeys": [],
+        "enableUpdateCatalog": True, 
+        "catalog.updateBehavior": "UPDATE_IN_DATABASE"
     },
     transformation_ctx="customer_curated",
 )
